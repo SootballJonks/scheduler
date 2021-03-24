@@ -4,7 +4,7 @@ import axios from "axios";
 export default function useApplicationData() {
 
   const [state, setState] = useState({
-    day: "monday",
+    day: "Monday",
     days: [],
     appointments: {},
     interviewers: {}
@@ -93,7 +93,6 @@ export default function useApplicationData() {
       axios.get("/api/interviewers")
     ])
     .then(response => {
-      
       setState((prev) => ({
         ...prev, 
         days: response[0].data,
