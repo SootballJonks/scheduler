@@ -28,18 +28,18 @@ export default function Appointment(props) {
 
   const onAdd = () => {
     transition(CREATE);
-  }
+  };
 
   const onCancel = () => {
     back();
-  }
+  };
 
   const onDelete = () => {
     transition(DELETING, true);
     props.cancelInterview(props.id)
       .then(() => transition(EMPTY))
       .catch((error) => transition(ERROR_DELETE, true))
-  }
+  };
 
   const onSave = (name, interviewer) => {
     const interview = {
@@ -51,7 +51,7 @@ export default function Appointment(props) {
       .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch((error) => transition(ERROR_SAVE, true))
-  }
+  };
 
   return (
     <article className="appointment" data-testid="appointment">
@@ -103,5 +103,5 @@ export default function Appointment(props) {
       />
       )}
     </article>
-  )
-}
+  );
+};

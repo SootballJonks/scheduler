@@ -7,9 +7,9 @@ export function getAppointmentsForDay(state, day) {
         output.push(state.appointments[value]);
       }
     }
-  }
+  };
   return output;
-}
+};
 
 export function getInterview(state, interview) {
   if (!interview) {
@@ -21,7 +21,7 @@ export function getInterview(state, interview) {
   output.interviewer = state.interviewers[interview.interviewer];
 
   return output;
-}
+};
 
 export function getInterviewersForDay(state, day) {
   let output = [];
@@ -30,8 +30,8 @@ export function getInterviewersForDay(state, day) {
 
   if (currentDay.length === 0) {
     return [];
-  }
+  };
   output = currentDay[0].interviewers.map((name) => state.interviewers[name]);
 
   return output;
-}
+};

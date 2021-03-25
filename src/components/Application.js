@@ -1,11 +1,9 @@
 import React from "react";
-
 import "components/Application.scss";
 import DayList from "./DayList";
 import Appointment from "./Appointment/index";
 import useApplicationData from "hooks/useApplicationData";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
-
 
 
 export default function Application(props) {
@@ -34,8 +32,6 @@ export default function Application(props) {
       />
     );
   });
-
-
 
   return (
     <main className="layout">
@@ -66,4 +62,4 @@ export default function Application(props) {
       </section>
     </main>
   );
-}
+};

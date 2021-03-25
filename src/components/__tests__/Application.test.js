@@ -1,12 +1,9 @@
 import React from "react";
-
 import { render, cleanup, waitForElement, fireEvent, getByText, prettyDOM,  getAllByTestId, getByAltText, getByPlaceholderText, queryByText, queryByAltText } from "@testing-library/react";
 import axios from "axios";
-
 import Application from "components/Application";
 
 afterEach(cleanup);
-
 
 describe("Application", () => {
   it("defaults to Monday and changes the schedule when a new day is selected", () => {
